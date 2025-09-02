@@ -39,9 +39,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap-toggle.css">
 
     <!-- Select2 -->
-	<link rel="stylesheet" href="{{asset('backend/plugins/select2/css/select2.min.css')}}">
-	<link rel="stylesheet" href="{{asset('backend/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
-	<link rel="stylesheet" href="{{asset('backend/dist/css/select2.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/dist/css/select2.css')}}">
 
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
@@ -100,7 +100,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap-toggle.js"></script>
 
     <!-- Select2 -->
-	<script src="{{asset('backend/plugins/select2/js/select2.full.min.js')}}"></script>
+    <script src="{{asset('backend/plugins/select2/js/select2.full.min.js')}}"></script>
 
     <!-- DataTables  & Plugins -->
     <script src="{{ asset('backend/plugins/datatables/jquery.dataTables.min.js') }}"></script>

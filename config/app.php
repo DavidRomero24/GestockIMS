@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'La Ocañerita'),
+    'name' => env('APP.NAME', 'GESTOCK'),
 
     /*
     |--------------------------------------------------------------------------
@@ -184,5 +184,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+    
 
 ];

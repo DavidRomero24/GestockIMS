@@ -6,10 +6,10 @@
 <div class="login-box" >
     <div class="card card-outline " >
         <div class="card-header text-center w-100 h-100">
-            <img src="{{asset('backend/dist/img/logo.png')}}" style="width: 60%; height: auto;" alt="">
+            <img src="{{asset('backend/dist/img/Gestock.png')}}" style="width: 70%; height: auto;" alt="">
         </div>
         <div class="card-body">
-            <p class="login-box-msg"><b>Welcome to the best restaurant</b></p>
+            <p class="login-box-msg"><b>Welcome to the best inventory management system</b></p>
             <form action="{{route('login')}}" method="post">
             @csrf
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>La Ocañerita</title>
+    <title>GESTOCK</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -827,30 +827,175 @@
                 padding: 2rem
             }
         }
+
+        .book {
+            position: relative;
+            border-radius: 10px;
+            width: 220px;
+            height: 300px;
+            background-color: whitesmoke;
+            -webkit-box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 12px #000;
+            -webkit-transform: preserve-3d;
+            -ms-transform: preserve-3d;
+            transform: preserve-3d;
+            -webkit-perspective: 2000px;
+            perspective: 2000px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            color: #000;
+        }
+
+        .cover {
+            top: 0;
+            position: absolute;
+            background-color: lightgray;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform-origin: 0;
+            -ms-transform-origin: 0;
+            transform-origin: 0;
+            -webkit-box-shadow: 1px 1px 12px #000;
+            box-shadow: 1px 1px 12px #000;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+
+        .book:hover .cover {
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: rotatey(-80deg);
+            -ms-transform: rotatey(-80deg);
+            transform: rotatey(-80deg);
+        }
+
+        .texto {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        /* botton access */
+        .user-profile {
+            width: 131px;
+            height: 51px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            background: linear-gradient(to bottom right,
+                    rgb(46, 255, 161) 15%,
+                    rgba(46, 142, 255, 0) 30%);
+            background-color: rgba(46, 142, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .user-profile:hover,
+        .user-profile:focus {
+            background-color: rgba(2, 89, 64, 1);
+            box-shadow: 0 0 10px rgba(2, 89, 64, 1);
+            outline: none;
+        }
+
+        .user-profile-inner {
+            width: 127px;
+            height: 47px;
+            border-radius: 13px;
+            background-color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            gap: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .user-profile-inner svg {
+            width: 27px;
+            height: 27px;
+            fill: #fff;
+        }
     </style>
 </head>
 
 <body class="antialiased ">
-    <div style="background-color: #A6774E; " class="relative sm:flex sm:justify-center sm:items-center min-h-screen ">
+    <div style="background-color: #0079C0; " class="relative sm:flex sm:justify-center sm:items-center min-h-screen ">
         <div class="ne " style="align-content: center;">
-            <img src="{{asset('backend/dist/img/logo.png')}}" style="width: 80%; height: auto; margin-left: 15%;" alt="">
-            <div class="relative ">
-                @if (Route::has('login'))
-                <div class=" sm:top-0 sm:center-0 p-10 text-center z-10">
-                    @auth
-                    <a href="{{ url('/home') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                    <a href="{{ route('login') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                    @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                    @endif
-                    @endauth
+            <!-- <img src="{{asset('backend/dist/img/Gestock.png')}}" style="width: 800px; height: auto; margin-left: 5%;" alt=""> -->
+            <div>
+                <div class="book">
+                    <p>Hello</p>
+                    <div class="cover">
+                        <p class="texto">Hover Me</p>
+                    </div>
                 </div>
-                @endif
+                <div class="relative " style="margin-top: 5%; display: flex; justify-content: center; align-items: center;">
+                    @if (Route::has('login'))
+                    <div class=" sm:top-0 sm:center-0  p-10 text-center z-10">
+                        @auth
+                        <a href="{{ url('/home') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
+                        @else
+                        <!-- <div aria-label="User Login Button" tabindex="0" role="button" class="user-profile">
+                            <div class="user-profile-inner">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2" id="Layer_2">
+                                        <path
+                                            d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z"></path>
+                                    </g>
+                                </svg>
+                                <a href="{{ route('login') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Access</a>
+                            </div>
+                        </div> -->
+                        <a href="{{ route('login') }}"
+                            aria-label="User Login Button"
+                            class="user-profile block focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+
+                            <div class="user-profile-inner flex items-center">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <g data-name="Layer 2" id="Layer_2">
+                                        <path
+                                            d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <span class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white ml-2">
+                                    Access
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <!-- @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+                        @endif
+                        @endauth -->
+                    </div>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

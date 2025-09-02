@@ -12,6 +12,7 @@ use App\Models\OrderDetail;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class OrderController extends Controller
 {
@@ -87,6 +88,25 @@ class OrderController extends Controller
             ]);
         }
 
+        $pdfName = 'uploads/bills/bill_' . $order->id . '_' . Carbon::now()->format('YmdHis') . '.pdf';
+
+            $order = Order::find($order->id);
+            $client = Customer::where("id", $order->customer_id)->first();
+            $details = OrderDetail::with('product')
+                ->where('order_details.order_id', '=', $order->id)
+                ->get();
+
+            $pdf = PDF::loadView('orders.bill', compact("order", "customer", "details"))
+                ->setPaper('letter')
+                ->output();
+
+
+
+            file_put_contents($pdfName, $pdf);
+
+            $order->route = $pdfName;
+            $order->save();
+
         return redirect()->route('orders.index')->with('success', 'Order created successfully.');
     
         
@@ -158,6 +178,8 @@ public function show($id)
 
         return redirect()->route('orders.index')->with('Eliminar', 'Ok');
     }
+
+    
     
     public function changestatusorder(Request $request)
 	{
