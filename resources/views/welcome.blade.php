@@ -993,7 +993,7 @@
 </head>
 
 <body class="antialiased ">
-    <div style="background-color: #0079C0; " class="relative sm:flex sm:justify-center sm:items-center min-h-screen ">
+    <div style="background-color: rgb(16, 63, 125); " class="relative sm:flex sm:justify-center sm:items-center min-h-screen ">
         <div class="ne " style="align-content: center;">
             <div>
                 <div class="book">

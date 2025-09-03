@@ -1,5 +1,5 @@
  <!-- Navbar -->
- <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #0079C0;">
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: rgb(16, 63, 125);">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">

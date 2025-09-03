@@ -1,16 +1,20 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #0079C0;">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: rgb(16, 63, 125);">
+
   <!-- Brand Logo -->
 
 
   <div>
-    <a href="index3.html" class="brand-link">
-      <img src="{{asset('backend/dist/img/LogoGESTOCK.png')}}" style="width: 35%; height: auto;" alt="">
-      <span class="brand-text font-weight-light"></span>
+    <a href="index3.html" class="brand-link" style="display: flex; justify-content: center;">
+      <img src="{{asset('backend/dist/img/GESTOCK.png')}}" style="width: 90%; height: auto;" alt="">
+      <!-- <div style="display: block; "> -->
+        <!-- <strong style="color: white; display: block">GESTOCK</strong>  -->
+        <!-- <span class="font-weight-light" style="font-size: small;">Inventory Management System</span> -->
+      <!-- </div> -->
     </a>
   </div>
 
   <!-- Sidebar -->
-  <div class="sidebar" style="background-color: #0079C0;">
+  <div class="sidebar" style="background-color: rgb(16, 63, 125);">
     <!-- Sidebar user panel (optional) -->
 
     <!-- SidebarSearch Form -->
@@ -113,7 +117,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" style="width: 10%; height:10%; margin-left: 4px; margin-right: 6px;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
                 </svg>
-                <p>403</p>
+                <p>Employee</p>
               </a>
             </li>
             <li class="nav-item">
@@ -122,7 +126,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
                 </svg>
 
-                <p>419</p>
+                <p>Supplier</p>
               </a>
             </li>
             <li class="nav-item">
@@ -130,7 +134,15 @@
                 <svg xmlns="http://www.w3.org/2000/svg" style="width: 10%; height:10%; margin-left: 4px; margin-right: 6px;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
                 </svg>
-                <p>500</p>
+                <p>Services</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="test-500" class="nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" style="width: 10%; height:10%; margin-left: 4px; margin-right: 6px;" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                </svg>
+                <p>Supplies</p>
               </a>
             </li>
           </ul>
