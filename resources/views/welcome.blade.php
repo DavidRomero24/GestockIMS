@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>GESTOCK</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-    <!-- Styles -->
     <style>
+        /* Estilos generales (se mantienen igual) */
         /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
         *,
         ::after,
@@ -539,7 +536,7 @@
         }
 
         .bg-dots-darker {
-            background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")
+            background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")
         }
 
         .from-gray-700\/50 {
@@ -828,70 +825,6 @@
             }
         }
 
-        .book {
-            position: relative;
-            border-radius: 10px;
-            width: 220px;
-            height: 300px;
-            background-color: whitesmoke;
-            -webkit-box-shadow: 1px 1px 12px #000;
-            box-shadow: 1px 1px 12px #000;
-            -webkit-transform: preserve-3d;
-            -ms-transform: preserve-3d;
-            transform: preserve-3d;
-            -webkit-perspective: 2000px;
-            perspective: 2000px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            color: #000;
-        }
-
-        .cover {
-            top: 0;
-            position: absolute;
-            background-color: lightgray;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            cursor: pointer;
-            -webkit-transition: all 0.5s;
-            transition: all 0.5s;
-            -webkit-transform-origin: 0;
-            -ms-transform-origin: 0;
-            transform-origin: 0;
-            -webkit-box-shadow: 1px 1px 12px #000;
-            box-shadow: 1px 1px 12px #000;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-
-        .book:hover .cover {
-            -webkit-transition: all 0.5s;
-            transition: all 0.5s;
-            -webkit-transform: rotatey(-80deg);
-            -ms-transform: rotatey(-80deg);
-            transform: rotatey(-80deg);
-        }
-
-        .texto {
-            font-size: 20px;
-            font-weight: bolder;
-        }
-
         /* botton access */
         .user-profile {
             width: 131px;
@@ -935,46 +868,179 @@
             height: 27px;
             fill: #fff;
         }
+
+        /* ESTILOS ACTUALIZADOS SOLO PARA LA CARTA */
+        .book {
+            position: relative;
+            border-radius: 15px;
+            width: 380px;
+            height: 500px;
+            background-color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: preserve-3d;
+            perspective: 2000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            overflow: hidden;
+        }
+
+        .cover {
+            top: 0;
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.5s;
+            transform-origin: 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .book:hover .cover {
+            transition: all 0.5s;
+            transform: rotatey(-80deg);
+        }
+
+        .texto {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            line-height: 1.3;
+        }
+
+        .book p {
+            margin: 10px 0;
+            line-height: 1.5;
+            font-size: 18px;
+            color: #1a1a1a;
+        }
+
+        .book img {
+            margin: 25px 0;
+            max-width: 220px;
+            filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.3));
+        }
+
+        /* NUEVOS ESTILOS PARA EL TEXTO INTERIOR */
+        .book-content {
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+        }
+
+        .book-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0079C0;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .book-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .book-features {
+            text-align: left;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .book-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #444;
+        }
+
+        .book-feature-icon {
+            margin-right: 10px;
+            color: #0079C0;
+            font-size: 18px;
+            min-width: 24px;
+        }
+
+        .book-cta {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #0079C0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 
 <body class="antialiased ">
     <div style="background-color: #0079C0; " class="relative sm:flex sm:justify-center sm:items-center min-h-screen ">
         <div class="ne " style="align-content: center;">
-            <!-- <img src="{{asset('backend/dist/img/Gestock.png')}}" style="width: 800px; height: auto; margin-left: 5%;" alt=""> -->
             <div>
                 <div class="book">
-                    <p>Hello</p>
+                    <div class="book-content">
+                        <div class="book-title">Bienvenido a GESTOCK</div>
+                        <div class="book-subtitle">Tu aliado en la gestión empresarial</div>
+                        
+                        <div class="book-features">
+                            <div class="book-feature">
+                                <span class="book-feature-icon">✅</span>
+                                <span>Controlar y organizar tu inventario en tiempo real</span>
+                            </div>
+                            <div class="book-feature">
+                                <span class="book-feature-icon">✅</span>
+                                <span>Realizar compras de manera rápida y eficiente</span>
+                            </div>
+                            <div class="book-feature">
+                                <span class="book-feature-icon">✅</span>
+                                <span>Gestionar múltiples actividades desde un solo lugar</span>
+                            </div>
+                            <div class="book-feature">
+                                <span class="book-feature-icon">✅</span>
+                                <span>Mejorar la productividad y optimizar tus recursos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="book-cta">¡Con GESTOCK, tu empresa crece con tecnología!</div>
+                    </div>
+                    
                     <div class="cover">
-                        <p class="texto">Hover Me</p>
+                        <p class="texto">Vive una experiencia única con</p>
+                        <img src="{{ asset('images/Gestock.png') }}" alt="Logo Gestock" width="200">
+                        <p>¡El mejor sistema para tu empresa!</p>
                     </div>
                 </div>
+                
                 <div class="relative " style="margin-top: 5%; display: flex; justify-content: center; align-items: center;">
                     @if (Route::has('login'))
                     <div class=" sm:top-0 sm:center-0  p-10 text-center z-10">
                         @auth
                         <a href="{{ url('/home') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
                         @else
-                        <!-- <div aria-label="User Login Button" tabindex="0" role="button" class="user-profile">
-                            <div class="user-profile-inner">
-                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <g data-name="Layer 2" id="Layer_2">
-                                        <path
-                                            d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z"></path>
-                                    </g>
-                                </svg>
-                                <a href="{{ route('login') }}" class=" font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Access</a>
-                            </div>
-                        </div> -->
-                        <a href="{{ route('login') }}"
-                            aria-label="User Login Button"
-                            class="user-profile block focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-
+                        <a href="{{ route('login') }}" aria-label="User Login Button" class="user-profile block focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
                             <div class="user-profile-inner flex items-center">
                                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                     <g data-name="Layer 2" id="Layer_2">
-                                        <path
-                                            d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
+                                        <path d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z">
                                         </path>
                                     </g>
                                 </svg>
@@ -983,19 +1049,13 @@
                                 </span>
                             </div>
                         </a>
-
-
-                        <!-- @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                        @endauth -->
+                        @endauth
                     </div>
                     @endif
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>

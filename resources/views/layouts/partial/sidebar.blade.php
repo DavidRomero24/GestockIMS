@@ -1,16 +1,16 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #A6774E;">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #0079C0;">
   <!-- Brand Logo -->
 
 
   <div>
     <a href="index3.html" class="brand-link">
-      <img src="{{asset('backend/dist/img/logo.png')}}" alt="logo ocañerita " class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">La Ocañerita</span>
+      <img src="{{asset('backend/dist/img/LogoGESTOCK.png')}}" style="width: 35%; height: auto;" alt="">
+      <span class="brand-text font-weight-light"></span>
     </a>
   </div>
 
   <!-- Sidebar -->
-  <div class="sidebar" style="background-color: #A6774E;">
+  <div class="sidebar" style="background-color: #0079C0;">
     <!-- Sidebar user panel (optional) -->
 
     <!-- SidebarSearch Form -->
@@ -18,7 +18,7 @@
       <div class="input-group" data-widget="sidebar-search">
         <input style="background-color: #FBF9F1;" class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
-          <button class="btn btn-sidebar" style="background-color: #D96941;">
+          <button class="btn btn-sidebar" style="background-color: #0DCAF0;">
             <i class="fas fa-search fa-fw"></i>
           </button>
         </div>
@@ -31,7 +31,7 @@
         <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
         <li class="nav-item menu-open">
-          <a href="home" class="nav-link active" style="background-color: #D96941;">
+          <a href="home" class="nav-link active" style="background-color: #0DCAF0;">
             <i class="nav-icon fas fa-home nav-icon"></i>
             <p>
               Home
