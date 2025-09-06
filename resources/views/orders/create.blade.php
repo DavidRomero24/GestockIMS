@@ -14,8 +14,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card">
-						<div class="card-header " style="background-color: #A6774E;">
-							<h3>@yield('title')</h3>
+						<div class="card-header " style="background-color: #103f7d;">
+							<h3 style="color:white;">@yield('title')</h3>
 						</div>
 						<form method="POST" action="{{ route('orders.store') }}" enctype="multipart/form-data">
 							@csrf
@@ -44,8 +44,8 @@
 									<!-- SELECT PRODUCTS TABLE -->
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									   <div class="card">
-									       <div class="card-header" style="background-color: #A6774E;">
-									           <h3>Order Detail</h3>
+									       <div class="card-header" style="background-color: #103f7d;">
+									           <h3 style="color:white">Order Detail</h3>
 									       </div>
 									       <div class="card-body">
 									           <div class="row">
@@ -79,7 +79,7 @@
 									                   </div>
 									               </div>
 									               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 mt-4">
-									                   <button type="button" style="background-color: #A6774E;" class="btn btn-block" id="add_producto">Add</button>
+									                   <button type="button" style="background-color: #103f7d; color:white;" class="btn btn-block" id="add_producto" >Add</button>
 									               </div>
 									           </div>
 									       </div>
@@ -116,7 +116,7 @@
 
 									<!-- Botón Registrar -->
 									<div class="col-lg-2 col-xs-4" style="margin: auto;">
-									    <button type="submit" class="btn btn-block "  id="register_button" style="display: none; background-color: #A6774E;">Save</button>
+									    <button type="submit" class="btn btn-block "  id="register_button" style="display: none; background-color: #103f7d;">Save</button>
 									</div>
 								</div>
 								<input type="hidden" class="form-control" name="status" value="1">
@@ -125,7 +125,7 @@
 							<div class="card-footer">
 								<div class="row">
 									<div class="col-lg-2 col-xs-4">
-										<a href="{{ route('orders.index') }}" class="btn btn-block btn-flat" style="background-color: #A6774E;">Back</a>
+										<a href="{{ route('orders.index') }}" class="btn btn-block btn-flat" style="background-color: #103f7d; color:white;">Back</a>
 									</div>
 								</div>
 							</div>

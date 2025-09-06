@@ -24,7 +24,7 @@
                             <div class="col-12">
                                 <h4>
                                     <a href="index3.html" class="brand-link">
-                                        <img src="{{ asset('backend/dist/img/logo.png') }}" alt="logo ocañerita" class="brand-image img-circle elevation-3" style="opacity: .8; background-color: #A6774E;">
+                                        <img src="{{ asset('backend/dist/img/logo.png') }}" alt="logo ocañerita" class="brand-image img-circle elevation-3" style="opacity: .8; background-color: #103f7d;">
                                     </a> La Ocañerita
                                     <small class="float-right">Date: {{ $order->date }}</small>
                                 </h4>
@@ -102,7 +102,7 @@
 
                         <div class="row no-print">
                             <div class="col-12">
-                                <a href="{{ route('orders.index') }}" class="btn" style="background-color: #A6774E;"><i class="fas fa-backward"></i> Back</a>
+                                <a href="{{ route('orders.index') }}" class="btn" style="background-color: #103f7d;"><i class="fas fa-backward"></i> Back</a>
                                 <!-- <button type="button" class="btn btn-success float-right"><i class="far fa-credit-card"></i> Submit Payment</button> -->
                                     <!-- <a href="#" style=" margin-right: 5px; " class="btn float-right btn-success btn-sm" title="Edit"><i style="padding: 7px 7px;" class="fas fa-pencil-alt"></i></a> -->
                                     <a target="_blank" href="{{ $order->route }}"  class="btn btn-primary float-right" style="margin-right: 5px;" title="Download bill">

@@ -14,9 +14,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header" style="background-color: #A6774E; color: white; font-size: 1.75rem; font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem;">
+                        <div class="card-header" style="background-color: #103f7d; color: white; font-size: 1.75rem; font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem;">
                             @yield('title')
-                            <a href="{{ route('orders.create') }}" class="btn btn-light float-right" style="color: #A6774E" title="Create"><i class="fas fa-plus nav-icon"></i></a>
+                            <a href="{{ route('orders.create') }}" class="btn btn-light float-right" style="color: #103f7d" title="Create"><i class="fas fa-plus nav-icon"></i></a>
                         </div>
                         <div class="card-body">
                             <table id="example1" class="table table-bordered table-hover" style="width: 100%">
@@ -41,7 +41,7 @@
                                             <input data-id="{{ $order->id }}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="Inactive" {{ $order->status ? 'checked' : '' }}>
                                         </td>
                                         <td>
-                                            <a href="{{ route('orders.show', $order->id) }}" class="btn btn-sm" title="Edit" style="background-color: #A6774E" ><i class="fas fa-eye"></i>											</a>
+                                            <a href="{{ route('orders.show', $order->id) }}" class="btn btn-sm" title="Edit" style="background-color: #103f7d" ><i class="fas fa-eye"></i>											</a>
                                             <form class="d-inline delete-form" action="{{ route('orders.destroy', $order) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')

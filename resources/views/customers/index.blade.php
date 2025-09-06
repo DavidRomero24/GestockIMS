@@ -15,10 +15,10 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
-						<div class="card-header" style="font-size: 1.75rem;font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem; background-color: #A6774E; color:white;">
+						<div class="card-header" style="font-size: 1.75rem;font-weight: 500; line-height: 1.2; margin-bottom: 0.5rem; background-color: #103f7d; color:white;">
 							@yield('title')
 
-							<a href="{{ route('customers.create') }}" class="btn btn-light float-right" title="Create"><i class="fas fa-plus nav-icon" style="color: #A6774E;"></i></a>
+							<a href="{{ route('customers.create') }}" class="btn btn-light float-right" title="Create"><i class="fas fa-plus nav-icon" style="color: #103f7d;"></i></a>
 
 						</div>
 						<div class="card-body">
