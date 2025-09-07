@@ -71,8 +71,8 @@
 <!-- section of sales -->
         <li class="nav-item" style="color: #FBF9F1">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-shopping-bag"></i>
-            <p>
+            <i class='fas fa-tags' style="margin-left:5px;"></i>
+            <p style="margin-left:9px;">
               Sales
               <i class="right fas fa-angle-left"></i>
             </p>
@@ -85,8 +85,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="test-500" class="nav-link">
-                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m11,2c0-1.105.895-2,2-2s2,.895,2,2-.895,2-2,2-2-.895-2-2Zm.942,3c.651.636,1.058,1.52,1.058,2.5v.5h2.407c.37,0,.665-.344.578-.704-.317-1.317-1.503-2.296-2.917-2.296h-1.126Zm-3.942,0c1.105,0,2-.895,2-2s-.895-2-2-2-2,.895-2,2,.895,2,2,2ZM.593,8h2.407v-.5c0-.98.407-1.864,1.058-2.5h-1.126C1.518,5,.332,5.979.015,7.296c-.087.36.208.704.578.704Zm22.642,5.015l-6.804,7.637c-1.896,2.128-4.617,3.348-7.467,3.348h-4.965c-2.206,0-4-1.794-4-4v-5c0-2.206,1.794-4,4-4h8.857c1.139,0,2.139.609,2.689,1.519l3.217-3.534c.54-.595,1.281-.944,2.085-.981.812-.039,1.574.24,2.169.782,1.214,1.107,1.312,3.005.218,4.23Zm-1.565-2.752c-.199-.181-.456-.269-.728-.262-.27.013-.519.129-.699.329l-4.427,4.865c-.386,1.07-1.339,1.89-2.514,2.058l-5.161.737c-.548.074-1.054-.302-1.132-.848-.078-.547.302-1.053.849-1.131l5.161-.737c.559-.08.98-.566.98-1.131,0-.63-.513-1.142-1.143-1.142H4c-1.103,0-2,.897-2,2v5c0,1.103.897,2,2,2h4.965c2.279,0,4.456-.976,5.973-2.678l6.805-7.638c.368-.412.335-1.049-.072-1.421Zm-16.063-1.263h4.786c.379,0,.68-.344.591-.704-.324-1.317-1.537-2.296-2.984-2.296s-2.66.979-2.984,2.296c-.089.36.213.704.591.704Zm-2.607-5c1.105,0,2-.895,2-2S4.105,0,3,0,1,.895,1,2s.895,2,2,2Z" fill="#fffdfd" fill-opacity="1" data-original-color="#000000ff" stroke="none" stroke-opacity="1"/></g></svg>
+              <a href="{{ route('services.index') }}" class="nav-link">
+                <i class='fas fa-phone' style="margin-left:5px"></i>
                 <p style="margin-left: 10px;">Services</p>
               </a>
             </li>
@@ -96,8 +96,8 @@
         <!-- section of staff -->
         <li class="nav-item" style="color: #FBF9F1">
           <a href="#" class="nav-link">
-            <i class="nav-icon fa fa-shopping-bag"></i>
-            <p>
+            <i class='fas fa-user-friends' style="margin-left:5px;"></i>
+            <p style="margin-left:6px;">
               Staff
               <i class="right fas fa-angle-left"></i>
             </p>
@@ -117,7 +117,7 @@
             </li>
             <li class="nav-item">
               <a href="{{route('customers.index')}}" class="nav-link">
-                <i class="far fa-user-circle nav-icon"></i>
+                <i class="far fa-user-circle nav-icon" style="font-size:23px; margin-rigth:30px"></i>
                 <p>Customer</p>
               </a>
             </li>

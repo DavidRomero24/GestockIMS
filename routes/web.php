@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\EmployeeController; // Añadido el controlador de empleados
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ServiceController; // Añadido el controlador de servicios
+use App\Http\Controllers\ServiceTypeController; // Añadido el controlador de tipos de servicio
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +42,17 @@ Route::group(['middleware'=>['auth']], function(){
     Route::get('changestatusorder', [OrderController::class, 'changestatusorder'])->name('changestatusorder');
     Route::get('/orders/{id}', [OrderController::class, 'show'])->name('orders.show');
     
-    //employees - AÑADIDAS LAS RUTAS DE EMPLEADOS
+    //employees
     Route::resource('employees', EmployeeController::class);
     Route::get('changestatusemployee', [EmployeeController::class, 'changestatusemployee'])->name('changestatusemployee');
+    
+    //services - AÑADIDAS LAS RUTAS DE SERVICIOS
+    Route::resource('services', ServiceController::class);
+    Route::get('changestatusservice', [ServiceController::class, 'changestatusservice'])->name('changestatusservice');
+    
+    //service-types - AÑADIDAS LAS RUTAS DE TIPOS DE SERVICIO
+    Route::resource('service-types', ServiceTypeController::class);
+    Route::get('changestatusservicetype', [ServiceTypeController::class, 'changestatusservicetype'])->name('changestatusservicetype');
 });
 
 // Rutas básicas de ejemplo
