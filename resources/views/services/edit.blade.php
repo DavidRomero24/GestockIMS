@@ -41,11 +41,15 @@
                                             <label class="control-label">Service Type <strong style="color:red;">(*)</strong></label>
                                             <select class="form-control" name="service_type_id_service" required>
                                                 <option value="">Select Service Type</option>
-                                                @foreach($serviceTypes as $serviceType)
-                                                    <option value="{{ $serviceType->id_service_type }}" {{ (old('service_type_id_service', $service->service_type_id_service) == $serviceType->id_service_type) ? 'selected' : '' }}>
-                                                        {{ $serviceType->service_category }}
-                                                    </option>
-                                                @endforeach
+                                                @if(isset($serviceTypes) && count($serviceTypes) > 0)
+                                                    @foreach($serviceTypes as $serviceType)
+                                                        <option value="{{ $serviceType->id_service_type }}" {{ (old('service_type_id_service', $service->service_type_id_service) == $serviceType->id_service_type) ? 'selected' : '' }}>
+                                                            {{ $serviceType->service_category }}
+                                                        </option>
+                                                    @endforeach
+                                                @else
+                                                    <option value="" disabled>No service types available.</option>
+                                                @endif
                                             </select>
                                         </div>
                                     </div>

@@ -41,7 +41,7 @@
                                             <td>{{ $service->id_service }}</td>
                                             <td>{{ $service->description }}</td>
                                             <td>${{ number_format($service->price, 2) }}</td>
-                                            <td>{{ $service->serviceType->service_category }}</td>
+                                            <td>{{ $service->serviceType->service_category ?? 'N/A' }}</td>
                                             <td>
                                                 <a href="{{ route('services.edit', $service->id_service) }}" class="btn btn-success btn-sm" title="Edit"><i class="fas fa-pencil-alt" style="justify-content: center;"></i></a>
                                                 <form class="d-inline delete-form" action="{{ route('services.destroy', $service->id_service) }}" method="POST">
@@ -71,7 +71,32 @@
 @push('scripts')
 <script>
     $(document).ready(function() {
-        $("#example1").DataTable();
+        // Verificar si DataTable ya está inicializado y destruirlo primero
+        if ($.fn.DataTable.isDataTable('#example1')) {
+            $('#example1').DataTable().destroy();
+        }
+        
+        // Inicializar DataTable con todas las opciones
+        $('#example1').DataTable({
+            "responsive": true,
+            "lengthChange": true,
+            "autoWidth": false,
+            "language": {
+                "sLengthMenu": "Show _MENU_ entries",
+                "sEmptyTable": "No hay datos disponibles en la tabla",
+                "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+                "sInfoEmpty": "Mostrando 0 a 0 de 0 entradas",
+                "sSearch": "Search:",
+                "sZeroRecords": "No se encontraron registros coincidentes en la tabla",
+                "sInfoFiltered": "(Filtrado de _MAX_ entradas totales)",
+                "oPaginate": {
+                    "sFirst": "First",
+                    "sPrevious": "Previous",
+                    "sNext": "Next",
+                    "sLast": "Last"
+                }
+            }
+        });
     });
 </script>
 <script>
@@ -102,28 +127,4 @@
     )
 </script>
 @endif
-<script type="text/javascript">
-    $(function() {
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": true,
-            "autoWidth": false,
-            "language": {
-                "sLengthMenu": "Show _MENU_ entries",
-                "sEmptyTable": "No hay datos disponibles en la tabla",
-                "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-                "sInfoEmpty": "Mostrando 0 a 0 de 0 entradas",
-                "sSearch": "Search:",
-                "sZeroRecords": "No se encontraron registros coincidentes en la tabla",
-                "sInfoFiltered": "(Filtrado de _MAX_ entradas totales)",
-                "oPaginate": {
-                    "sFirst": "First",
-                    "sPrevious": "Previous",
-                    "sNext": "Next",
-                    "sLast": "Last"
-                }
-            }
-        });
-    });
-</script>
 @endpush
